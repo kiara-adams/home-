@@ -1,0 +1,452 @@
+/* Resetting default browser styles */
+/* body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+} */
+
+/* Basic styles for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* header h1 {
+    margin-bottom: 10px;
+} */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Basic styles for the main content */
+main {
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    margin-top: 10px;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+/* Basic styles for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+/* Styles for the cover image */
+.cover-image {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.cover-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cover-text p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d00;
+}
+
+.container-fluid {
+    padding: 20px 0;
+}
+
+.row {
+    margin-right: -10px; 
+    margin-left: -10px; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.circle-container {
+    flex: 1 1 auto;
+    margin: 10px; 
+}
+
+.circle {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.circle img {
+    width: 100%; 
+    height: auto; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.card-text {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+
+
+.body-product{
+background-color: rgb(253, 225, 230);
+}
+
+
+header {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2; /* Set logo above navbar */
+    top: 20px;
+    left: 20px;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1; /* Set navbar behind content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease;
+}
+
+.cover-image {
+    position: relative;
+    z-index: 0; /* Ensure content is above navbar */
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center the list items */
+    margin: 0;
+    padding-top: 20px; /* Adjust padding as needed */
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+/* .card {
+    width: 100%; 
+    position: relative; 
+} */
+
+/* .card-img-top {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+} */
+.card-img-top {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    height: 150vh;
+}
+
+.card-img-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.card-title,
+.card-text,
+.btn {
+    margin: 10px; 
+}
+
+/* navybRRRR */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #F7CAC9; /* Light pink color */
+    overflow: hidden;
+}
+
+.navbar-logo {
+    float: left;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    float: right;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Add hover transition */
+}
+
+.navbar-menu li a:hover {
+    background-color: #D9A7C7; /* Light purple color on hover */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F7CAC9; /* Light pink color for dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Add hover transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #D9A7C7; /* Light purple color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#toggle:checked + .menu-btn {
+    background-color: #D9A7C7; /* Light purple color when menu is open */
+}
+
+#toggle:checked + .menu-btn::after {
+    content: "\2715";
+}
+
+#toggle:checked ~ .navbar-menu {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        clear: both;
+        float: none;
+    }
+
+    .navbar-menu li {
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #F7CAC9; /* Light pink color for dropdown */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    #toggle:checked ~ .navbar-menu {
+        display: block;
+    }
+}
+.video-container {
+    
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-top: 20px; /* Add space between the content and the video */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* index */
+.body-index{
+    background-color: #F7CAC9;
+}
+
+/* carrddd */
+/* Add styles for card images */
+.card-pictures {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-img-hover {
+    display: none;
+}
+
+.card:hover .card-img {
+    display: none;
+}
+
+.card:hover .card-img-hover {
+    display: block;
+}
