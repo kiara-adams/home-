@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles */
+    .product-img {
+      max-width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <h1>My Store</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./product.html">Shop</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./admin.html">Contact</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="container">
+  <h1 class="mt-4">Admin Dashboard</h1>
+  
+  <!-- Sorting Button -->
+  <button type="button" class="btn btn-primary mb-3">Sort Products</button>
+
+  <!-- Add New Product Button -->
+  <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#addProductModal">
+    Add New Product
+  </button>
+
+  <!-- Product Table -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table content will be dynamically populated here -->
+      <tr>
+        <td>Sample Product</td>
+        <td><img src="https://via.placeholder.com/150" alt="Sample Product" class="product-img"></td>
+        <td>Sample Category</td>
+        <td>$19.99</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-info">Edit</button>
+          <button type="button" class="btn btn-sm btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Add Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" class="form-control" id="productName">
+          </div>
+          <div class="form-group">
+            <label for="productImage">Product Image URL</label>
+            <input type="url" class="form-control" id="productImage">
+          </div>
+          <div class="form-group">
+            <label for="productCategory">Category</label>
+            <input type="text" class="form-control" id="productCategory">
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Price</label>
+            <input type="number" class="form-control" id="productPrice">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (jQuery and Popper.js required) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+
+<!-- Custom JS for sorting, adding new products, etc. -->
+<script>
+  // Sample product data (replace with actual data fetched from server)
+  const products = [
+    { name: "Sample Product", image: "https://via.placeholder.com/150", category: "Sample Category", price: 19.99 },
+    // Add more sample products as needed
+  ];
+
+  // Function to populate the product table
+  function populateProductTable() {
+    const tableBody = document.querySelector('tbody');
+    tableBody.innerHTML = '';
+    products.forEach(product => {
+      const row = `
+        <tr>
+          <td>${product.name}</td>
+          <td><img src="${product.image}" alt="${product.name}" class="product-img"></td>
+          <td>${product.category}</td>
+          <td>$${product.price}</td>
+          <td>
+            <button type="button" class="btn btn-sm btn-info">Edit</button>
+            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+      `;
+      tableBody.innerHTML += row;
+    });
+  }
+
+  // Initial population of product table
+  populateProductTable();
+</script>
+
+</body>
+</html>

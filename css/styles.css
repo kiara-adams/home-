@@ -4,7 +4,7 @@
     padding: 0;
 } */
 
-/* Basic styles for the header */
+/* Basic styles for the headee
 header {
     background-color: #333;
     color: #fff;
@@ -272,10 +272,10 @@ header {
 }
 
 /* navybRRRR */
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
+} */
 
 .navbar {
     background-color: #F7CAC9; /* Light pink color */
@@ -450,3 +450,61 @@ body {
 .card:hover .card-img-hover {
     display: block;
 }
+
+.body-admin {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffe0e6; /* Light pink background color */
+  }
+
+  nav-u {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background color for nav */
+    z-index: 2; /* Ensure nav is on top of the image */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+  }
+
+  .image-container {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    background-image: url('https://kiara-adams.github.io/ecommerce-images/'); /* Add your image URL */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background color for image overlay */
+  }
+
+  .content {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 200px; /* Adjust margin-top to ensure content doesn't overlap with nav */
+  }
